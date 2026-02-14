@@ -1,6 +1,6 @@
 package string;
 
-public class stringBufferAndBuilder {
+public class StringBufferAndBuilder {
 
 	static StringBuffer sBuff = new StringBuffer("Hello");
 	static StringBuilder sBuil = new StringBuilder("Hey!");

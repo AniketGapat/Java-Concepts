@@ -18,7 +18,7 @@ public class Palindrome {
 	 }
 	 
 	 static void checkPalindrome(String string){
-		 String normalised = string.toLowerCase();
+		 String normalised = string.replaceAll("\\s+", "").toLowerCase();
 		 String reversed = new StringBuilder(normalised).reverse().toString();
 		 if(normalised.equals(reversed)) {
 			 System.out.println(string+ " is Palindrome Number");
@@ -38,5 +38,6 @@ public class Palindrome {
 		checkPalindrome("Ana");
 		checkPalindrome("1234");
 		checkPalindrome("454");
+		checkPalindrome("Never odd or even");
 	}
 }

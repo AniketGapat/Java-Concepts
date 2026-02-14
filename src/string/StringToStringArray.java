@@ -1,6 +1,6 @@
 package string;
 
-public class stringToStringArray {
+public class StringToStringArray {
 
 	public static void main(String[] args) {
 		String str = "Hey! It was nice to meet you. Let's catch up again?";

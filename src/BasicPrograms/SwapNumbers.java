@@ -1,5 +1,8 @@
 package BasicPrograms;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class SwapNumbers {
 
 	public static void main(String[] args) {
@@ -51,10 +54,10 @@ public class SwapNumbers {
 
 		// 5. Largest and smallest number from three numbers
 		int j = 23;
-		int k = 11;
+		int k = 23;
 		int l = 67;
-		int temp = j > k ? j : k;
-		int largest = l > temp ? l : temp;
+		int temp = j >= k ? j : k;
+		int largest = l >= temp ? l : temp;
 		System.out.printf("Largest numbers between %d, %d and %d is %d%n", j, k, l, largest);
 		
 		
@@ -62,6 +65,25 @@ public class SwapNumbers {
 		int smallest = l < tem ? l : tem;
 		System.out.printf("Smallest numbers between %d, %d and %d is %d%n", j, k, l, smallest);
 		
+		int[] arr1 = {1,2,5,8,9};
+        int[] arr2 = {7,3,5,2,8,9};
+        int[] arr3 = {9,6,5,8};
+         Set<Integer> set1 = new HashSet<Integer>();
+         for(int n:arr1){
+             set1.add(n);
+         }
+         Set<Integer> set2 = new HashSet<Integer>();
+         for(int n:arr2){
+             if(set1.contains(n)){
+                 set2.add(n);
+             }
+         }
+         System.out.println("Duplicate element between all arrays are:");
+         for(int n:arr3){
+             if(set2.contains(n)){
+                 System.out.print(n+" ");
+             }
+         }
 		
 	}
 
