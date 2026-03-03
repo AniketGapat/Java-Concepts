@@ -27,14 +27,23 @@ public class CharacterFrequencySorter {
 			System.out.println(entry.getKey() + " -- " + entry.getValue());
 		}
 
-		System.out.println("printing frequency in descending ordere");
+		// print unique characters
+		System.out.println("Unique characters are: ");
+		for (Entry<Character, Integer> entry : map.entrySet()) {
+			if(entry.getValue() == 1) {
+				System.out.print(entry.getKey() + " ");
+			}
+		}
 		
+		System.out.println();
+		System.out.println("printing frequency in descending ordere");
+
 		// Convert Map into List for sorting
 		List<Map.Entry<Character, Integer>> list = new ArrayList<>(map.entrySet());
-		
-		//Sort list in descending order based on frequency
-		//Result = 5 - 2 = positive → swap → higher first
-		list.sort((a,b) -> b.getValue() - a.getValue());
+
+		// Sort list in descending order based on frequency
+		// Result = 5 - 2 = positive → swap → higher first
+		list.sort((a, b) -> b.getValue() - a.getValue());
 
 		for (Entry<Character, Integer> entry : list) {
 			System.out.println(entry.getKey() + " -- " + entry.getValue());

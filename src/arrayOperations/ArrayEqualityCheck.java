@@ -1,4 +1,4 @@
-package arrayOperations;
+   package arrayOperations;
 
 import java.util.Arrays;
 
